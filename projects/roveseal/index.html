@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#162720">
+  <meta name="description" content="RoveSeal is a travel backpack concept built around a vacuum-compression compartment. Explore the black travel pack and planned pump-included configuration.">
+  <meta property="og:title" content="RoveSeal — Make room for the journey">
+  <meta property="og:description" content="A cleaner way to pack for the trip ahead. Explore the RoveSeal vacuum-compression travel backpack.">
+  <title>RoveSeal | Pack more thoughtfully</title>
+  <style>
+    :root{--forest:#14291f;--forest2:#1d392b;--mint:#d6ebd9;--sage:#719681;--cream:#f8f8f2;--ink:#19261e;--muted:#65756a;--border:#dce5da;--white:#fff}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+    body.lock{overflow:hidden}
+    button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+    :focus-visible{outline:3px solid #4aaf87;outline-offset:3px}
+    .container{max-width:1260px;padding:0 38px;margin:auto}
+    .announcement{background:var(--forest);color:#dbeadd;padding:10px 16px;text-align:center;font-size:11px;font-weight:750;letter-spacing:.11em;text-transform:uppercase}
+    .header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
+    .header .container{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:75px}
+    .brand{font-size:26px;font-weight:900;letter-spacing:-.075em;line-height:1;white-space:nowrap}.brand span{color:#70a48b}
+    .nav{display:flex;gap:32px;align-items:center}.nav a{font-size:12px;font-weight:750;color:#586b5e;transition:color .2s}.nav a:hover{color:#0f7b52}
+    .actions{display:flex;align-items:center;gap:9px}
+    .cart-button{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #cad9cd;border-radius:99px;padding:10px 15px;font-size:12px;font-weight:800}
+    .cart-button b{background:var(--forest);color:#fff;border-radius:99px;min-width:21px;height:21px;display:grid;place-items:center;font-size:10px}
+    .menu-button{display:none;background:none;border:0;font-size:23px}
+    .button{border:0;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:15px 24px;background:var(--forest);color:#fff;font-size:13px;font-weight:850;min-height:49px;transition:transform .2s,background .2s}
+    .button:hover{background:#28523b;transform:translateY(-2px)}.button:disabled{background:#88968b;cursor:not-allowed;transform:none}
+    .button.secondary{background:transparent;color:var(--forest);border:1px solid #a8bdad}.button.secondary:hover{background:#e8f0e9}
+    .button.full{width:100%}
+    .eyebrow{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.18em;color:#4c8967;display:flex;align-items:center;gap:11px}
+    .eyebrow:before{content:"";width:22px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}h1,h2,h3{letter-spacing:-.06em;line-height:1.07}
+    h1{font-size:clamp(48px,6vw,91px);font-weight:880;margin:22px 0 24px}
+    h2{font-size:clamp(33px,4.2vw,59px);font-weight:850;margin:18px 0}
+    h3{font-size:21px;margin-bottom:10px}
+    .hero{display:grid;grid-template-columns:49% 51%;min-height:620px;background:var(--cream)}
+    .hero-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:74px 6% 74px max(38px,calc((100vw - 1184px)/2))}
+    .hero h1 em{font-style:normal;color:#7eae91}
+    .hero .intro{color:var(--muted);font-size:16px;max-width:470px;line-height:1.85;margin-bottom:27px}
+    .hero-buttons{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .hero-price{font-size:28px;font-weight:900;letter-spacing:-.06em}.hero-price small{font-size:11px;font-weight:650;color:#77887b;letter-spacing:0}
+    .fineprint{font-size:11px;color:#79887d;margin-top:22px;max-width:490px}
+    .hero-media{position:relative;background:#e7eee6;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero-media:before{content:"";width:76%;aspect-ratio:1;border:1px solid #c7d9c9;border-radius:50%;position:absolute}
+    .hero-media:after{content:"";width:104%;aspect-ratio:1;border:1px solid #d3e0d3;border-radius:50%;position:absolute}
+    .hero-media img{width:83%;max-width:590px;aspect-ratio:1;object-fit:cover;border-radius:50%;position:relative;z-index:1;box-shadow:0 25px 65px #354a3529}
+    .media-chip{position:absolute;z-index:2;right:30px;top:35px;padding:12px 15px;background:#fff;box-shadow:0 8px 25px #283c2c17;border:1px solid #d7e5d9;border-radius:5px;font-size:10px;letter-spacing:.12em;font-weight:850}
+    .photo-credit{position:absolute;z-index:2;bottom:20px;left:25px;color:#657a69;font-size:10px;letter-spacing:.08em}
+    .promise{border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr)}
+    .promise>div{padding:22px 16px;border-right:1px solid var(--border);text-align:center;color:#5b6e60;font-size:12px;font-weight:800}
+    .promise>div:last-child{border:0}.promise span{font-size:18px;color:#519874;margin-right:10px}
+    .section{padding:104px 0}.section-head{text-align:center;max-width:660px;margin:0 auto 45px}.section-head .eyebrow{justify-content:center}.section-head p{color:var(--muted);line-height:1.85}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.step{background:#f3f7f2;border:1px solid #e1eae1;padding:34px 31px;border-radius:10px;min-height:246px}
+    .step .number{color:#75a68a;font-size:11px;font-weight:900;letter-spacing:.16em}.step .glyph{font-size:44px;line-height:1;margin:23px 0;color:#467c60}
+    .step p,.feature p{color:#6a796e;font-size:13px;line-height:1.8}.note{text-align:center;color:#77877b;font-size:12px;margin:25px auto 0}
+    .dark{background:var(--forest);color:#fff}.dark .eyebrow{color:#a3d8b5}.dark .section-head p{color:#b5cbbb}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{background:#1c3729;border:1px solid #3b5b44;border-radius:10px;padding:33px;min-height:215px}.feature .glyph{font-size:28px;color:#a6d6b4}.feature h3{margin:21px 0 10px}.feature p{color:#b7cabb}
+    .split{display:grid;grid-template-columns:1fr 1fr;background:#e4eee3}
+    .split-copy{padding:90px max(38px,calc((100vw - 1184px)/2)) 90px 10%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .split-copy p{max-width:490px;color:#607366;line-height:1.85}
+    .split-art{min-height:390px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(circle,#e9f0e7 0,#b7d0bc 80%)}
+    .split-art img{width:min(72%,410px);border-radius:12px;box-shadow:25px 25px 55px #36533b44;transform:rotate(-5deg)}
+    .details{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .details-media{background:#f1f5ef;padding:45px;border-radius:12px}.details-media img{border-radius:8px;width:100%;aspect-ratio:1;object-fit:cover}
+    .details-copy p{color:var(--muted);line-height:1.8}
+    .specs{margin-top:27px;border-top:1px solid var(--border)}.spec{padding:16px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:25px;font-size:13px}.spec span:first-child{color:#738377}.spec span:last-child{font-weight:800;text-align:right}
+    .shop{background:#e7f1e7;padding:90px 0}.shop-card{max-width:1000px;margin:auto;background:#fff;border-radius:13px;box-shadow:0 24px 50px #46634922;overflow:hidden;display:grid;grid-template-columns:49% 51%}
+    .shop-photo{background:#e1ece2;padding:42px;display:grid;place-items:center}.shop-photo img{width:100%;border-radius:8px;max-width:410px}
+    .shop-copy{padding:50px 45px}.shop-copy h2{font-size:41px}.shop-price{font-size:38px;letter-spacing:-.07em;font-weight:900;margin:13px 0 20px}.shop-price small{font-size:12px;color:#75887a;letter-spacing:0;font-weight:650}
+    .shop-check{border-top:1px solid var(--border);padding:12px 0;color:#5c6c60;font-size:13px}
+    .quantity{display:flex;border:1px solid #cfdbd0;width:max-content;border-radius:7px;margin:20px 0;overflow:hidden}.quantity button{width:42px;height:41px;border:0;background:#fff;font-size:21px}.quantity span{min-width:36px;text-align:center;line-height:41px;font-weight:800}
+    .shop-copy .small{font-size:11px;color:#79887b;line-height:1.6;margin:13px 0 0}
+    .faq{max-width:820px;margin:auto}.faq details{border-bottom:1px solid var(--border);padding:21px 0}.faq summary{list-style:none;display:flex;justify-content:space-between;gap:20px;font-weight:800;cursor:pointer;font-size:15px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font-size:22px;font-weight:400}.faq details[open] summary:after{content:"−"}.faq details p{font-size:13px;color:#6d7c70;line-height:1.9;padding-top:13px;margin-bottom:0}
+    .closing{background:#c8e5ce;text-align:center;padding:83px 20px}.closing h2{max-width:640px;margin:18px auto 20px}.closing p{color:#4f725a;margin-bottom:24px}
+    footer{background:var(--forest);color:#e8f3e9;padding:62px 0 24px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}footer .brand{font-size:29px}footer p{max-width:340px;font-size:12px;color:#a9c2ae;line-height:1.85;margin:18px 0}footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:4px 0 18px}.footer-links{display:flex;flex-direction:column;gap:11px}.footer-links button,.footer-links a{color:#b9cfc0;text-align:left;border:0;background:none;padding:0;font-size:12px;width:max-content;max-width:100%;cursor:pointer}.footer-links button:hover,.footer-links a:hover{color:#fff}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #395642;margin-top:50px;padding-top:22px;color:#9db6a4;font-size:11px}
+    dialog{border:0;border-radius:12px;padding:0;box-shadow:0 30px 100px #0004;color:var(--ink)}dialog::backdrop{background:#07150dcc}
+    #cartDialog{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(460px,100%);border-radius:0}
+    .dialog-header{padding:24px 27px;display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid var(--border)}.dialog-header h2{font-size:24px;margin:0}
+    .close{width:35px;height:35px;border-radius:50%;background:#eef3ec;border:0;font-size:24px;line-height:1}
+    .cart-layout{height:calc(100% - 85px);display:flex;flex-direction:column}.cart-body{padding:26px;flex:1;overflow:auto}.cart-footer{padding:23px 26px;border-top:1px solid var(--border)}
+    .cart-product{display:flex;gap:17px;align-items:center}.cart-product img{width:96px;height:106px;object-fit:cover;border-radius:8px;background:#e6ede5}.cart-product h3{font-size:17px;margin:0 0 6px}.cart-product p{font-size:12px;color:#738274;margin:0 0 8px}.cart-product strong{font-size:16px}
+    .cart-controls{display:flex;align-items:center;gap:12px;margin-top:20px}.cart-controls button{width:32px;height:31px;border:1px solid #d4dfd5;background:#fff;border-radius:5px}.cart-controls .remove{border:0;width:auto;color:#8a615b;text-decoration:underline;font-size:12px;margin-left:10px}
+    .subtotal{display:flex;justify-content:space-between;font-size:15px;margin-bottom:15px}.checkout-warning{padding:12px;border-radius:7px;background:#fff6e6;color:#78592c;font-size:12px;line-height:1.65;margin:14px 0}
+    #policyDialog{width:min(800px,calc(100% - 24px));max-height:88dvh}.policy-content{padding:24px 38px 38px;overflow:auto;max-height:calc(88dvh - 86px);font-size:13px;line-height:1.85;color:#536758}.policy-content h3{font-size:17px;letter-spacing:-.03em;margin:26px 0 8px;color:var(--ink)}.policy-content p{margin:0 0 14px}.policy-content a{color:#186c48;text-decoration:underline}
+    .cookie{position:fixed;bottom:20px;left:20px;z-index:15;max-width:355px;background:#fff;border:1px solid #cbdacb;border-radius:10px;box-shadow:0 15px 40px #0002;padding:20px;display:none}.cookie p{font-size:12px;color:#617365;line-height:1.6;margin:7px 0 14px}.cookie .button{min-height:38px;padding:9px 17px}
+    .launch-label{display:inline-block;font-size:10px;letter-spacing:.08em;color:#80643b;background:#fff1d7;padding:7px 10px;border-radius:5px;margin-top:14px;font-weight:800}
+    @media(max-width:850px){.container{padding:0 22px}.nav{display:none;position:absolute;left:0;right:0;top:75px;background:#fff;padding:24px;box-shadow:0 15px 20px #0001;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.menu-button{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 26px}.hero-media{min-height:400px}.hero-media img{max-width:390px;width:73%}.steps,.features{grid-template-columns:1fr}.step,.feature{min-height:unset}.split,.details,.shop-card{grid-template-columns:1fr}.split-copy{padding:65px 26px}.split-art{min-height:330px}.details{gap:30px}.shop-copy{padding:35px 27px}.shop-photo{padding:35px}.section{padding:74px 0}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:span 2}}
+    @media(max-width:500px){h1{font-size:clamp(48px,12vw,65px)}.header .container{min-height:66px}.brand{font-size:23px}.nav{top:66px}.hero-media{min-height:340px}.hero-media img{width:82%}.media-chip{top:14px;right:14px}.promise>div{font-size:10px;padding:15px 5px}.promise span{display:block;margin:0}.section-head{text-align:left}.section-head .eyebrow{justify-content:flex-start}.shop-copy h2{font-size:35px}.footer-bottom{flex-direction:column}.cookie{left:12px;right:12px;bottom:12px;max-width:none}.policy-content{padding:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+  <!-- STORE CONFIGURATION: before accepting orders, confirm supplier inventory/shipping, image usage rights, return terms, and merchant details. -->
+  <div class="announcement" id="announcement">Preview storefront · Orders not yet open</div>
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="RoveSeal home">ROVE<span>SEAL</span></a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#how">How it works</a><a href="#features">Why RoveSeal</a><a href="#details">The details</a><a href="#faq">FAQ</a>
+      </nav>
+      <div class="actions">
+        <button class="cart-button" id="cartOpen" aria-label="Open shopping bag">Bag <b id="cartCount">0</b> ↗</button>
+        <button class="menu-button" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Travel with intention</div>
+        <h1>Make room<br>for <em>more.</em></h1>
+        <p class="intro">A black travel backpack with a vacuum-compression option designed to reduce the bulk of packed clothing. Less time rearranging. More time getting there.</p>
+        <div class="hero-buttons">
+          <a class="button" href="#shop">Explore the pack <span aria-hidden="true">↗</span></a>
+          <span class="hero-price">$99 <small>planned USD price</small></span>
+        </div>
+        <p class="fineprint">Compression reduces volume, not weight. Product configuration, delivery and availability are being finalized.</p>
+      </div>
+      <div class="hero-media">
+        <div class="media-chip">01 / THE TRAVEL PACK</div>
+        <img src="https://cf.cjdropshipping.com/quick/product/a4d36e51-5aa3-4cd9-b736-cf07b7e2e65f.jpg?x-oss-process=image%2Fresize%2Cm_fill%2Cm_pad%2Cw_800%2Ch_800" alt="Supplier photograph of a black travel backpack worn over one shoulder" width="800" height="800" fetchpriority="high">
+        <span class="photo-credit">Supplier product photograph · Usage rights to be confirmed</span>
+      </div>
+    </section>
+    <div class="promise" aria-label="Product highlights">
+      <div><span aria-hidden="true">✦</span>Compression-first design</div>
+      <div><span aria-hidden="true">◇</span>Black travel-ready finish</div>
+      <div><span aria-hidden="true">↗</span>Pump option listed by supplier</div>
+    </div>
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">A more thoughtful way to pack</div><h2>Pack. Seal. Compress.</h2><p>Vacuum compression can make soft items take up less room, without changing what they weigh.</p></div>
+        <div class="steps">
+          <article class="step"><div class="number">01 / PACK</div><div class="glyph" aria-hidden="true">▤</div><h3>Start with the essentials.</h3><p>Place compressible clothing in the designated compartment. Keep fragile or rigid items separate.</p></article>
+          <article class="step"><div class="number">02 / SEAL</div><div class="glyph" aria-hidden="true">⌁</div><h3>Close the compartment.</h3><p>Prepare the compartment's seal according to the final product instructions.</p></article>
+          <article class="step"><div class="number">03 / COMPRESS</div><div class="glyph" aria-hidden="true">◉</div><h3>Remove excess air.</h3><p>Use the appropriate compatible pump to reduce the bulk of packed soft clothing.</p></article>
+        </div>
+        <p class="note">The selected supplier catalog includes a black-with-pump option; exact package contents must be confirmed before sale.</p>
+      </div>
+    </section>
+    <section class="section dark" id="features">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Designed around the journey</div><h2>Take what matters.<br>Leave the bulk.</h2><p>One less packing compromise for weekends, business trips and the in-between.</p></div>
+        <div class="features">
+          <article class="feature"><div class="glyph" aria-hidden="true">▧</div><h3>More intentional packing</h3><p>A compression-focused design helps you organize soft items around the space available.</p></article>
+          <article class="feature"><div class="glyph" aria-hidden="true">↗</div><h3>One-bag mindset</h3><p>Carry a single bag for the moments when you want to travel simply.</p></article>
+          <article class="feature"><div class="glyph" aria-hidden="true">◉</div><h3>Understated appearance</h3><p>A solid black finish and business-travel styling, as described in the supplier catalog.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="split">
+      <div class="split-copy"><div class="eyebrow">Wherever next takes you</div><h2>Ready for<br>the in-between.</h2><p>Early departures, quick getaways and unfamiliar places. Build your packing routine around the journey, not the luggage.</p><a href="#details" class="button secondary">Discover the details ↗</a></div>
+      <div class="split-art"><img src="https://cf.cjdropshipping.com/quick/product/a4d36e51-5aa3-4cd9-b736-cf07b7e2e65f.jpg?x-oss-process=image%2Fresize%2Cm_fill%2Cm_pad%2Cw_800%2Ch_800" alt="Supplier photograph showing the black backpack being worn" width="800" height="800" loading="lazy"></div>
+    </section>
+    <section class="section" id="details">
+      <div class="container details">
+        <div class="details-media"><img src="https://cf.cjdropshipping.com/quick/product/a4d36e51-5aa3-4cd9-b736-cf07b7e2e65f.jpg?x-oss-process=image%2Fresize%2Cm_fill%2Cm_pad%2Cw_800%2Ch_800" alt="Black travel backpack, sourced from the supplier listing" width="800" height="800" loading="lazy"></div>
+        <div class="details-copy"><div class="eyebrow">Product details</div><h2>Everything in its place.</h2><p>Our current product candidate is a vacuum-compression travel backpack listed by CJdropshipping. Details below are taken from its supplier listing and will be checked against a physical sample before orders open.</p>
+          <div class="specs">
+            <div class="spec"><span>Catalog product</span><span>Vacuum compression backpack</span></div>
+            <div class="spec"><span>Color</span><span>Black</span></div>
+            <div class="spec"><span>Exterior material</span><span>Oxford cloth (supplier listed)</span></div>
+            <div class="spec"><span>Lining</span><span>Polyester (supplier listed)</span></div>
+            <div class="spec"><span>Supplier reference</span><span>CJYD232914001AZ</span></div>
+            <div class="spec"><span>Pump inclusion</span><span>Pending variant confirmation</span></div>
+            <div class="spec"><span>Bag measurements</span><span>Pending physical verification</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="shop" id="shop">
+      <div class="container">
+        <div class="shop-card">
+          <div class="shop-photo"><img src="https://cf.cjdropshipping.com/quick/product/a4d36e51-5aa3-4cd9-b736-cf07b7e2e65f.jpg?x-oss-process=image%2Fresize%2Cm_fill%2Cm_pad%2Cw_800%2Ch_800" alt="Black vacuum-compression travel backpack shown in a supplier photograph" width="800" height="800" loading="lazy"></div>
+          <div class="shop-copy">
+            <div class="eyebrow">The RoveSeal edit</div><h2>The Travel Pack</h2>
+            <p style="color:#6b7a6e;font-size:13px;line-height:1.8">Black vacuum-compression travel backpack. Planned offer: black with pump, subject to supplier confirmation.</p>
+            <div class="shop-price">$99.00 <small>planned price · USD</small></div>
+            <div class="shop-check">✓ Black colorway</div>
+            <div class="shop-check">✓ Supplier-listed Oxford cloth exterior</div>
+            <div class="shop-check">✓ Polyester lining</div>
+            <div class="shop-check">✓ Supplier-listed pump configuration under review</div>
+            <div class="quantity" aria-label="Select quantity"><button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button><span id="qtyValue" aria-live="polite">1</span><button type="button" id="qtyPlus" aria-label="Increase quantity">+</button></div>
+            <button class="button full" type="button" id="addToCart">Add to bag — <span id="linePrice">$99.00</span> ↗</button>
+            <p class="small">No orders or payments are being accepted while supplier terms, product photography permissions, shipping and payment setup are finalized.</p>
+            <span class="launch-label" id="launchStatus">PRE-LAUNCH · CHECKOUT NOT ACTIVE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Good to know</div><h2>Questions, answered.</h2></div>
+        <div class="faq">
+          <details><summary>Does compression reduce the bag's weight?</summary><p>No. Compression reduces the volume of certain soft contents by removing excess air. It does not reduce the weight of those items.</p></details>
+          <details><summary>Does the backpack include a pump?</summary><p>The supplier offers a black-with-pump option, but the exact contents of the selected SKU need final confirmation. We will state the included accessories clearly before checkout becomes available.</p></details>
+          <details><summary>Will it fit under every airline seat?</summary><p>Airline personal-item and carry-on rules vary. Final bag measurements are still being verified, so no universal airline fit is claimed.</p></details>
+          <details><summary>When will orders ship?</summary><p>Orders are not open yet. We will publish verified processing and delivery estimates once the supplier confirms a shipping method and destination coverage.</p></details>
+          <details><summary>What is the return policy?</summary><p>A proposed 30-day return window is being prepared. Return eligibility, costs and the return address will be finalized before purchases are enabled. Open the Returns page in the footer for the current draft.</p></details>
+          <details><summary>Where do the photos come from?</summary><p>The displayed product photograph is linked to the product's CJdropshipping supplier listing. We have not yet verified the reseller's image-use permissions and will confirm them before public commercial launch.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="closing"><div class="eyebrow" style="justify-content:center;color:#48765a">Make room for what's next</div><h2>The best part isn't<br>what you packed.</h2><p>Get to know the RoveSeal Travel Pack.</p><a class="button" href="#shop">Explore the pack ↗</a></section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand">ROVE<span>SEAL</span></div><p>Thoughtful travel gear for a more considered journey. This storefront is in pre-launch configuration; sales are not yet enabled.</p></div>
+        <div><h4>Explore</h4><div class="footer-links"><a href="#how">How it works</a><a href="#features">Features</a><a href="#details">Product details</a><a href="#faq">Questions</a></div></div>
+        <div><h4>Support &amp; policies</h4><div class="footer-links"><button type="button" data-policy="contact">Contact</button><button type="button" data-policy="shipping">Shipping</button><button type="button" data-policy="returns">Returns &amp; refunds</button><button type="button" data-policy="privacy">Privacy</button><button type="button" data-policy="terms">Terms of service</button></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> RoveSeal. All rights reserved.</span><span>Built for the journey ahead.</span></div>
+    </div>
+  </footer>
+  <dialog id="cartDialog" aria-label="Your shopping bag">
+    <div class="dialog-header"><h2>Your bag (<span id="drawerCount">0</span>)</h2><button type="button" class="close" data-close aria-label="Close shopping bag">×</button></div>
+    <div class="cart-layout">
+      <div class="cart-body" id="cartBody"></div>
+      <div class="cart-footer">
+        <div class="subtotal"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+        <div style="font-size:12px;color:#778579">Shipping and taxes will be shown at checkout when orders open.</div>
+        <div class="checkout-warning" id="checkoutMessage">Checkout is not connected. No orders or payments can be placed from this preview.</div>
+        <button type="button" class="button full" id="checkout" disabled>Secure checkout · Coming soon</button>
+        <button type="button" class="button secondary full" data-close style="margin-top:10px">Continue exploring</button>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="policyDialog" aria-labelledby="policyTitle">
+    <div class="dialog-header"><h2 id="policyTitle">Store policy</h2><button type="button" class="close" data-close aria-label="Close policy">×</button></div>
+    <div class="policy-content" id="policyContent"></div>
+  </dialog>
+  <div class="cookie" id="cookieNotice" role="region" aria-label="Site storage notice"><strong style="font-size:13px">A note about storage</strong><p>This site uses essential local storage to remember your shopping bag and your preference for this notice. No advertising trackers are included.</p><button type="button" class="button" id="cookieOkay">Got it</button></div>
+  <script>
+    "use strict";
+    // EDIT THESE SETTINGS BEFORE LAUNCH. Do not set launchReady to true until the launch checklist is complete.
+    const CONFIG = Object.freeze({
+      priceUSD: 99,
+      stripePaymentLink: "", // Example format: https://buy.stripe.com/your-real-link
+      merchantEmail: "", // Your real customer support email
+      legalBusinessName: "", // Your actual registered legal merchant name
+      merchantAddress: "", // Your business mailing address
+      governingState: "", // State used in the final Terms
+      launchReady: false
+    });
+    const $ = id => document.getElementById(id);
+    const money = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n);
+    const safeRead = (key, fallback) => { try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; } };
+    const safeWrite = (key, value) => { try { localStorage.setItem(key,value); } catch {} };
+    const photo = "https://cf.cjdropshipping.com/quick/product/a4d36e51-5aa3-4cd9-b736-cf07b7e2e65f.jpg?x-oss-process=image%2Fresize%2Cm_fill%2Cm_pad%2Cw_800%2Ch_800";
+    const paymentLinkValid = (() => { try { const u = new URL(CONFIG.stripePaymentLink); return u.protocol === "https:" && (u.hostname === "buy.stripe.com" || u.hostname.endsWith(".stripe.com")); } catch { return false; } })();
+    let selectedQty = 1;
+    let cartQty = Math.max(0,Math.min(25,Number.parseInt(safeRead("roveseal-cart","0"),10) || 0));
+    const isCheckoutLive = CONFIG.launchReady && paymentLinkValid;
+    if (isCheckoutLive) { $("announcement").textContent = "RoveSeal · Secure checkout powered by Stripe"; $("launchStatus").textContent = "SECURE CHECKOUT AVAILABLE"; }
+    $("year").textContent = new Date().getFullYear();
+    const updateSelected = () => { $("qtyValue").textContent = String(selectedQty); $("linePrice").textContent = money(selectedQty * CONFIG.priceUSD); };
+    $("qtyMinus").addEventListener("click",() => { selectedQty = Math.max(1,selectedQty-1); updateSelected(); });
+    $("qtyPlus").addEventListener("click",() => { selectedQty = Math.min(25,selectedQty+1); updateSelected(); });
+    $("menuToggle").addEventListener("click",() => { const open = $("nav").classList.toggle("open"); $("menuToggle").setAttribute("aria-expanded",String(open)); });
+    document.querySelectorAll("#nav a").forEach(a => a.addEventListener("click",() => { $("nav").classList.remove("open"); $("menuToggle").setAttribute("aria-expanded","false"); }));
+    function updateCart(){
+      $("cartCount").textContent = String(cartQty);
+      $("drawerCount").textContent = String(cartQty);
+      $("subtotal").textContent = money(cartQty * CONFIG.priceUSD);
+      safeWrite("roveseal-cart",String(cartQty));
+      const body = $("cartBody");
+      body.replaceChildren();
+      if (cartQty === 0) {
+        const wrap = document.createElement("div"); wrap.style.cssText="text-align:center;padding:65px 10px";
+        const heading = document.createElement("h3"); heading.textContent="Your bag is empty."; heading.style.fontSize="24px";
+        const p = document.createElement("p"); p.textContent="Your next journey starts here."; p.style.color="#748577";
+        wrap.append(heading,p); body.append(wrap);
+      } else {
+        const row = document.createElement("div"); row.className="cart-product";
+        const img = document.createElement("img"); img.src=photo; img.alt="Black travel backpack";
+        const info = document.createElement("div");
+        const name=document.createElement("h3");name.textContent="The RoveSeal Travel Pack";
+        const variant=document.createElement("p");variant.textContent="Black · Supplier-listed compression design";
+        const price=document.createElement("strong");price.textContent=money(cartQty * CONFIG.priceUSD);
+        info.append(name,variant,price);row.append(img,info);body.append(row);
+        const controls=document.createElement("div");controls.className="cart-controls";
+        const minus=document.createElement("button");minus.textContent="−";minus.setAttribute("aria-label","Remove one");minus.onclick=()=>{cartQty=Math.max(0,cartQty-1);updateCart();};
+        const count=document.createElement("strong");count.textContent=String(cartQty);
+        const plus=document.createElement("button");plus.textContent="+";plus.setAttribute("aria-label","Add one");plus.onclick=()=>{cartQty=Math.min(25,cartQty+1);updateCart();};
+        const remove=document.createElement("button");remove.className="remove";remove.textContent="Remove";remove.onclick=()=>{cartQty=0;updateCart();};
+        controls.append(minus,count,plus,remove);body.append(controls);
+      }
+      // A Stripe Payment Link cannot be assumed to receive the cart's quantity.
+      // Only one unit is allowed until a quantity-aware checkout is integrated.
+      const canPay = isCheckoutLive && cartQty === 1;
+      $("checkout").disabled=!canPay;
+      $("checkout").textContent=canPay?"Proceed to secure checkout ↗":"Secure checkout · Coming soon";
+      $("checkoutMessage").textContent=!isCheckoutLive
+        ? "Checkout is not connected. No orders or payments can be placed from this preview."
+        : cartQty>1 ? "This checkout currently supports one item per order. Reduce your bag to one item to continue." : cartQty===0 ? "Add the Travel Pack to continue." : "You will be redirected to Stripe's secure payment page. Confirm all order details before paying.";
+    }
+    $("addToCart").addEventListener("click",()=>{cartQty=Math.min(25,cartQty+selectedQty);updateCart();$("cartDialog").showModal();});
+    $("cartOpen").addEventListener("click",()=>{updateCart();$("cartDialog").showModal();});
+    $("checkout").addEventListener("click",()=>{if(isCheckoutLive && cartQty===1)window.location.assign(CONFIG.stripePaymentLink);});
+    document.querySelectorAll("[data-close]").forEach(btn=>btn.addEventListener("click",()=>btn.closest("dialog").close()));
+    document.querySelectorAll("dialog").forEach(dialog=>dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();}));
+    const business = () => CONFIG.legalBusinessName || "[LEGAL MERCHANT NAME]";
+    const email = () => CONFIG.merchantEmail || "[SUPPORT EMAIL]";
+    const address = () => CONFIG.merchantAddress || "[BUSINESS MAILING ADDRESS]";
+    const state = () => CONFIG.governingState || "[GOVERNING STATE]";
+    const policyData = {
+      contact: {title:"Contact",render:()=>"<p>For questions about products, shipping, or orders, please contact our customer support team.</p><h3>Customer support</h3><p>Email: <strong>"+email()+"</strong><br>Business: <strong>"+business()+"</strong><br>Mailing address: <strong>"+address()+"</strong></p><p>Customer support details will be completed before orders are accepted.</p>"},
+      shipping: {title:"Shipping Policy",render:()=>"<p><strong>Effective October 9, 2026.</strong></p><h3>Delivery destinations</h3><p>We plan to ship to eligible U.S. addresses. The final list of supported locations will be displayed before checkout.</p><h3>Processing and delivery times</h3><p>Orders are not open yet. Once we finalize our fulfillment arrangement, the applicable processing and estimated delivery times will be disclosed before payment and in the order confirmation. Delivery estimates are not guarantees.</p><h3>Shipping fees</h3><p>Any shipping charges, if applicable, will be shown before you pay. We will not charge for shipping without disclosing the amount at checkout.</p><h3>Tracking and delivery issues</h3><p>Where available, tracking information will be sent to the email on your order. Contact "+email()+" if a shipment is missing, delayed or damaged. We will review the issue and applicable remedies.</p><h3>Address accuracy</h3><p>Check your shipping address carefully. Contact us promptly about corrections; changes may not be possible once fulfillment begins.</p>"},
+      returns: {title:"Returns & Refunds",render:()=>"<p><strong>Effective October 9, 2026.</strong></p><h3>Proposed 30-day return window</h3><p>Our intended policy is to accept eligible return requests within 30 days after delivery. This policy is being finalized before checkout opens.</p><h3>Requesting a return</h3><p>Contact "+email()+" with your order number and the reason for the return. We will provide instructions and a confirmed return destination. Do not ship an item to an unconfirmed address.</p><h3>Condition and included components</h3><p>Return all included product components and accessories. We may inspect returned items in accordance with applicable law.</p><h3>Return shipping costs</h3><p>Any customer-paid return shipping costs will be disclosed before a return is authorized. Defective or incorrectly supplied products will be handled according to applicable consumer protections.</p><h3>Refunds</h3><p>Approved refunds will be issued to the original payment method. Your payment provider may take additional time to post the funds.</p><h3>Consumer rights</h3><p>Nothing in this policy limits statutory rights that cannot be waived.</p>"},
+      privacy: {title:"Privacy Policy",render:()=>"<p><strong>Effective October 9, 2026.</strong> This website is operated by "+business()+".</p><h3>Information collected</h3><p>We may collect information you provide when ordering or contacting us, such as name, email, phone number, billing and delivery addresses, order information and support messages. We may also process basic technical information needed to operate and secure the website.</p><h3>Use of information</h3><p>We use information to fulfill orders, communicate with customers, provide support, prevent fraud, comply with law and improve our services.</p><h3>Payments</h3><p>When enabled, payments will be processed by Stripe or another identified payment provider. We do not intend to store full card details on this website.</p><h3>Service providers</h3><p>We may share information with payment processors, delivery and fulfillment providers, hosting services, and professional advisers as needed for these purposes or as required by law.</p><h3>Cookies and local storage</h3><p>This site uses essential browser storage to remember the shopping bag and whether the storage notice was dismissed. This build does not include advertising pixels or third-party analytics.</p><h3>Retention and security</h3><p>We retain information as reasonably necessary for service, legal obligations, security and dispute resolution and use reasonable safeguards.</p><h3>Your privacy choices</h3><p>Depending on applicable law, you may have rights to access, correct, delete or otherwise control personal information. Send requests to "+email()+".</p><h3>Children</h3><p>This store is not directed to children under 13.</p><h3>Updates and contact</h3><p>We may update this policy by publishing a new effective date. Contact "+email()+" for privacy inquiries.</p>"},
+      terms: {title:"Terms of Service",render:()=>"<p><strong>Effective October 9, 2026.</strong> RoveSeal is a brand operated by "+business()+".</p><h3>Website use</h3><p>You agree to use this website lawfully, provide accurate order information and not interfere with site security or other users.</p><h3>Products and prices</h3><p>We aim to describe products and prices accurately. Product details may be updated as verified. Prices are in U.S. dollars unless stated otherwise. Taxes and shipping charges will be shown before payment.</p><h3>Order acceptance</h3><p>An order submission is an offer to buy. We may decline an order where legally permitted, including in cases of pricing errors, fraud concerns or unavailability, and issue any refund due.</p><h3>Payments</h3><p>Payments will be handled by a disclosed third-party processor once checkout is enabled. Orders cannot currently be placed on this preview.</p><h3>Shipping and returns</h3><p>Shipping and returns are governed by the policies available on this website, together with applicable consumer protection laws.</p><h3>Intellectual property</h3><p>Brand and website content may not be copied or commercially reused without permission, except where allowed by law.</p><h3>Limitations</h3><p>To the extent permitted by law, we do not accept liability for indirect or consequential losses arising from website use. Nothing here excludes liability that cannot lawfully be excluded.</p><h3>Governing law</h3><p>These terms are governed by the laws of "+state()+", without overriding mandatory consumer protections.</p><h3>Contact</h3><p>"+business()+"<br>"+address()+"<br>"+email()+"</p>"}
+    };
+    document.querySelectorAll("[data-policy]").forEach(btn=>btn.addEventListener("click",()=>{
+      const p=policyData[btn.dataset.policy]; if(!p)return;
+      $("policyTitle").textContent=p.title;
+      $("policyContent").innerHTML=(CONFIG.launchReady?"":"<p style='background:#fff3dd;padding:10px;border-radius:6px;color:#80643b'><strong>Pre-launch draft:</strong> merchant and fulfillment details will be completed before orders open.</p>")+p.render();
+      $("policyDialog").showModal();
+    }));
+    if(safeRead("roveseal-storage-ok","")!=="yes")$("cookieNotice").style.display="block";
+    $("cookieOkay").addEventListener("click",()=>{safeWrite("roveseal-storage-ok","yes");$("cookieNotice").style.display="none";});
+    updateCart();
+  </script>
+</body>
+</html>
